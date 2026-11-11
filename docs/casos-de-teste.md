@@ -30,7 +30,7 @@ Salvo indicação, `y = 3400` (centro do gol), `z = 0` e `lance = BOLA_ROLANDO`.
 | TC-18 | R6 | entra no gol, `lance = LATERAL`, arremesso do ATAQUE | tiro de meta da DEFESA | TD |
 | TC-19 | R6 | entra no gol, `lance = LATERAL`, arremesso da DEFESA | escanteio do ATAQUE | TD |
 | TC-20 | R2, R6 | entra no gol, `lance = ESCANTEIO`, último toque ATAQUE | gol do ATAQUE (a exceção é só do lateral) | TD |
-| TC-21 | Modelo | `x = 0` / `x = -1` | bola em jogo / erro | VL |
+| TC-21 | Modelo | `x = 0` / `x = -1` | bola em jogo / erro com a mensagem exata `x negativo esta fora do modelo` | VL |
 
 ## Posição de impedimento (R7)
 
@@ -47,7 +47,7 @@ Salvo indicação, `xs_defensores = [10400, 8000, 7000]` (penúltimo = 8000) e `
 | TC-27 | defensores `[10400, 5000]`, `x_bola = 4000`, `x_jogador = 5250` / `5251` | não impedido / impedido (linha do meio) | VL |
 | TC-28 | `x_bola = 9000`, `x_jogador = 8500` (atrás da bola) | não impedido | PE |
 | TC-29 | defensores `[6000, 8000, 9000]` (goleiro adiantado), `x_jogador = 8500` | impedido (penúltimo = 8000) | PE |
-| TC-30 | defensores `[9000]` | erro | PE |
+| TC-30 | defensores `[9000]` | erro com a mensagem exata `sao necessarios pelo menos 2 defensores` | PE |
 
 ## Infração de impedimento (R8)
 

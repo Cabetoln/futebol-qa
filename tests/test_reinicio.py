@@ -64,7 +64,7 @@ def test_gol_direto_de_bola_parada(lance, ultimo, esperado):
 
 
 def test_tc21_x_negativo_e_erro():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"^x negativo esta fora do modelo$"):
         decidir_reinicio(-1, CENTRO_DO_GOL, 0, A)
 
 

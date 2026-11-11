@@ -30,7 +30,7 @@ def test_em_posicao_de_impedimento(x_jogador, x_bola, defensores, esperado):
 
 
 def test_tc30_menos_de_dois_defensores_e_erro():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match=r"^sao necessarios pelo menos 2 defensores$"):
         em_posicao_de_impedimento(9500, BOLA, [9000])
 
 
